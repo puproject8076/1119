@@ -1,26 +1,12 @@
-# --- Flask Web Framework ---
-flask
-flask-cors
+Flask==3.0.3
+Flask-Cors==4.0.0
+firebase-admin==6.5.0
+ddddocr==1.5.6
+Pillow==10.2.0
+requests==2.31.0
+openpyxl==3.1.2
+playwright==1.43.0
+python-dotenv==1.0.1
+groq==0.9.0
 
-# --- Firebase ---
-firebase-admin
-
-# --- LLM / Groq API ---
-groq
-requests
-
-# --- OCR (條件安裝：只有 Python < 3.12 才安裝新版本) ---
-ddddocr==1.4.11 ;
-
-# 若 Python >= 3.12，dddocr 會自動跳過，不會報錯
-
-# --- Playwright ---
-playwright
-# 安裝瀏覽器時記得再執行： playwright install
-
-# --- Excel export ---
-openpyxl
-
-# --- Timezone ---
-pytz
 
