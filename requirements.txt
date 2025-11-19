@@ -1,29 +1,26 @@
-# === Flask Web Framework ===
-Flask==3.0.3
-Flask-CORS==5.0.0
+# --- Flask Web Framework ---
+flask
+flask-cors
 
-# === Firebase ===
-firebase-admin==6.5.0
+# --- Firebase ---
+firebase-admin
 
-# === LLM / Groq API（升級 groq 避免 proxies 錯誤）===
-groq==0.13.0  # 修復 httpx 0.28+ proxies 相容問題
-requests==2.32.3
-httpx==0.27.0  # 鎖定舊版 httpx，避免 Render 自動拉新版衝突
+# --- LLM / Groq API ---
+groq
+requests
 
-# === OCR：ddddocr（根據 Python 版本自動選）===
-ddddocr==1.4.11; python_version<"3.12"
-ddddocr==1.3.7;  python_version>="3.12"
+# --- OCR (條件安裝：只有 Python < 3.12 才安裝新版本) ---
+ddddocr==1.4.11 ;
 
-# === Playwright ===
-playwright==1.48.0
-# 部署後記得跑：playwright install chromium
+# 若 Python >= 3.12，dddocr 會自動跳過，不會報錯
 
-# === Excel 匯出 ===
-openpyxl==3.1.5
+# --- Playwright ---
+playwright
+# 安裝瀏覽器時記得再執行： playwright install
 
-# === 時區 ===
-pytz==2024.2
+# --- Excel export ---
+openpyxl
 
-# === 生產環境（Render 等平台用）===
-gunicorn==23.0.0
+# --- Timezone ---
+pytz
 
