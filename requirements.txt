@@ -1,3 +1,7 @@
+--no-warn-script-location
+--disable-pip-version-check
+--quiet
+
 # === Flask Web Framework ===
 Flask==3.0.3
 Flask-CORS==5.0.0
@@ -27,4 +31,5 @@ openpyxl==3.1.5
 pytz==2024.2
 
 # === 生產環境建議（Render / Railway / Fly.io / Heroku 等）===
+
 gunicorn==23.0.0
