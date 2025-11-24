@@ -24,7 +24,7 @@ app = Flask(__name__)
 CORS(app)  # 啟用跨域支援，否則 Flutter Web 會被擋
 
 # 初始化 Firebase
-cred = credentials.Certificate('firebase_api.json')
+cred = credentials.Certificate('serviceAccountKey.json')
 firebase_admin.initialize_app(cred)
 taipei = pytz.timezone('Asia/Taipei')
 db = firestore.client()
@@ -838,4 +838,5 @@ def export_transactions():
         return jsonify({'error': str(e)}), 400
 
 if __name__ == '__main__':
+
     app.run(host='0.0.0.0', port=5000, debug=True)
